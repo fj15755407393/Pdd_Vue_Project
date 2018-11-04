@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!--<link rel="stylesheet" href="static/css/index.css">-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=E7kSqLeZeSrU7Cm7KMRgv4OiP8oPKNt7"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+    <!--头部-->
+    <div class="top">
+        <!--导航栏-->
+        <div class="nav">
+            <div id="logo"><a href="./index.html">logo</a></div>
+            <div>image</div>
+            <div id="index"><a href="./index.html">首页</a></div>
+            <div><a href="./pages/search.html">职位搜索</a></div>
+            <div><a href="./pages/forum.html">论坛</a></div>
+            <div id="login"><a href="pages/login.html">登录</a></div>
+            <div>|</div>
+            <div id="regist"><a href="./pages/regist.html">注册</a></div>
+
+        </div>
+        <!--轮播图推广-->
+        <div class="top-body">
+            <!--<div class="image"><a href="#">-->
+                <!--<div></div>-->
+            <!--</a></div>-->
+            <div class="lunbo">
+                <div id="myNiceCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- 圆点指示器 -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myNiceCarousel" data-slide-to="1"></li>
+                        <li data-target="#myNiceCarousel" data-slide-to="2"></li>
+                        <li data-target="#myNiceCarousel" data-slide-to="3"></li>
+                        <li data-target="#myNiceCarousel" data-slide-to="4"></li>
+
+
+                    </ol>
+
+                    <!-- 轮播项目 -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img  src="static/images/image/lun1.jpg" >
+
+                        </div>
+                        <div class="item">
+                            <img  src="static/images/image/lun2.jpg">
+
+                        </div>
+
+                        <div class="item">
+                            <img  src="static/images/image/lun4.jpg">
+
+                        </div>
+                        <div class="item">
+                            <img  src="static/images/image/lun5.jpg">
+
+                        </div>
+                        <div class="item">
+                            <img  src="static/images/image/lun6.jpg">
+
+                        </div>
+                    </div>
+
+                    <!-- 项目切换按钮 -->
+                    <a class="left carousel-control" href="#myNiceCarousel" data-slide="prev">
+                        <span class="icon icon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#myNiceCarousel" data-slide="next">
+                        <span class="icon icon-chevron-right"></span>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!--搜索栏-->
+        <div class="top-footer">
+            <div class="search-box">
+                <!--搜索-->
+
+                <div><a href="">
+                    <div class="search-type">全文
+                        <div id="icon"></div>
+                    </div>
+                </a></div>
+                <div href="" class="hidden-search-type">公司</div>
+                <!--输入框-->
+                <div class="input"><input type="text" placeholder="请输入关键字"></div>
+                <!--地点-->
+                <div><a href="">
+                    <div class="address">苏州
+                        <div id="add"></div>
+                    </div>
+                </a></div>
+
+                <!--搜索按钮-->
+                <div><a href="./pages/search.html">
+                    <div class="btn-box">
+                        <div class="btn"></div>
+                    </div>
+                </a></div>
+
+
+            </div>
+            <!--热门搜索-->
+            <div id="hot-search">
+                <label for="hot-search">热门搜索:</label>
+                <a href="#">销售</a>
+                <a href="#">运营</a>
+                <a href="#">java</a>
+                <a href="#">全栈工程师</a>
+                <a href="#">采购</a>
+                <a href="#">投资经理</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--主体-->
+    <div class="main">
+        <!--岗位标签+岗位推送-->
+        <div class="main-top">
+            <!--岗位标签-->
+            <div class="main-top-left">
+
+
+            </div>
+            <!--岗位推送-->
+            <div class="main-top-right">
+                <a href="#">
+                    <div class="top-right-image"></div>
+                </a>
+
+
+            </div>
+        </div>
+        <div class="main-body">
+            <!--热门职位+最新职位标签分类-->
+            <div class="main-hot-positions">
+                <a href="#">
+                    <div class="hot-label">热门职位</div>
+                </a>
+                <a href="#">
+                    <div class="latest-label">最新职位</div>
+                </a>
+
+
+            </div>
+            <!--岗位总栏位-->
+            <div class="main-body-positions">
+                <!--每一个岗位栏-->
+                <!--<div class="position">-->
+                    <!--&lt;!&ndash;岗位信息&ndash;&gt;-->
+                    <!--<div class="position_info">-->
+                        <!--<div class="row-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="position_name">游戏平面设计师</div>-->
+                            <!--</a>-->
+                            <!--<div class="pub_time">[13:40发布]</div>-->
+                            <!--<a href="">-->
+                                <!--<div class="more_info"></div>-->
+                            <!--</a>-->
+                            <!--<div class="salary">5k-10k</div>-->
+                        <!--</div>-->
+                        <!--<div class="row-2">-->
+                            <!--<div class="exp">经验1-3年</div>-->
+                            <!--<div class="edu">大专</div>-->
+
+                        <!--</div>-->
+                        <!--<div class="row-3">-->
+                            <!--<div class="position_label">广告</div>-->
+                            <!--<div class="position_label">美工</div>-->
+                            <!--<div class="position_label">创意</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;所属公司&ndash;&gt;-->
+                    <!--<div class="company">-->
+                        <!--<a href="">-->
+                            <!--<div class="company_icon"></div>-->
+                        <!--</a>-->
+                        <!--<div class="company_info">-->
+                            <!--<a href="">-->
+                                <!--<div class="company_name">心动网络</div>-->
+                            <!--</a>-->
+                            <!--<span>移动互联网,游戏</span><span>|</span>-->
+                            <!--<span>天使轮</span><span>|</span>-->
+                            <!--<span>广东</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<div class="position"></div>-->
+                <!--<div class="position"></div>-->
+                <!--<div class="position"></div>-->
+                <!--<div class="position"></div>-->
+                <!--<div class="position"></div>-->
+                <!--<div class="position"></div>-->
+                <!--<div class="position"></div>-->
+                <!--<div class="position"></div>-->
+
+                <!--<div class="get-more" id="get_more_position"><a href="#">-->
+                    <!--<div>查看更多</div>-->
+                <!--</a></div>-->
+            </div>
+            <!--热门公司-->
+            <div class="hot-company">
+
+                <div class="main-hot-company">
+                    <a href="#">
+                        <div class="hot-label">热门公司</div>
+                    </a>
+
+
+                </div>
+                <!--公司总栏位-->
+                <div class="main-body-companies">
+                    <!--每一个公司栏-->
+                    <!--<div class="company-item">-->
+                        <!--<div class="company-message">-->
+                            <!--&lt;!&ndash;公司头像&ndash;&gt;-->
+                            <!--<a href="">-->
+                                <!--<div class="company-images"></div>-->
+                            <!--</a>-->
+                            <!--&lt;!&ndash;公司名字&ndash;&gt;-->
+                            <!--<a href="">-->
+                                <!--<div class="name">海智科技</div>-->
+                            <!--</a>-->
+                            <!--<div class="other">-->
+                                <!--&lt;!&ndash;类型&ndash;&gt;-->
+                                <!--<span class="type">移动互联网</span>-->
+                                <!--&lt;!&ndash;融资&ndash;&gt;-->
+                                <!--<span class="rongzi">B轮</span>-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash;简介&ndash;&gt;-->
+                            <!--<div class="intro">-->
+                                <!--<p>公司专注于健康医疗行业。依托互联网...</p>-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                        <!--<div class="data">-->
+                            <!--<div class="data-1">-->
+                                <!--<span>39</span>-->
+                                <!--<a href="#">面试评价</a>-->
+                            <!--</div>-->
+                            <!--<div class="data-2">-->
+                                <!--<span>31</span>-->
+                                <!--<a href="#">在招职位</a>-->
+                            <!--</div>-->
+                            <!--<div class="data-3">-->
+                                <!--<span>67%</span>-->
+                                <!--<a href="#">简历处理率</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+
+                    <!--</div>-->
+                    <!--<div class="company-item"></div>-->
+                    <!--<div class="company-item"></div>-->
+                    <!--<div class="company-item"></div>-->
+                    <!--<div class="company-item"></div>-->
+                    <!--<div class="company-item"></div>-->
+                    <!--<div class="company-item"></div>-->
+                    <!--<div class="company-item"></div>-->
+                    <!--<div class="company-item"></div>-->
+                    <!--<div class="get-more" id="get_more_company"><a href="#">-->
+                        <!--<div>查看更多</div>-->
+                    <!--</a></div>-->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+
+        <!--友情链接-->
+        <div class="blogroll">
+            <div class="link-label">
+                <span>友情链接</span>
+                <span>友链交换联系QQ：2695411569@qq.com</span>
+                <span>联系邮箱：2695411569@qq.com友情链接</span>
+            </div>
+            <div class="links">
+                <a href="#">媒体及友链合作</a>
+                <a href="#">事业招聘单位</a>
+                <a href="#">最新招聘信息</a>
+                <a href="#">找工作</a>
+                <a href="#">苏州人才市场</a>
+                <a href="#">卫生人才网</a>
+                <a href="#">广西人才网</a>
+                <a href="#">拉勾网</a>
+                <a href="#">智联招聘</a>
+                <a href="#">武汉人才网</a>
+                <a href="#">北京旅游攻略</a>
+                <a href="#">江门人才网</a>
+                <a href="#">找工作</a>
+                <a href="#">苏州人才市场</a>
+                <a href="#">卫生人才网</a>
+                <a href="#">广西人才网</a>
+                <a href="#">拉勾网</a>
+                <a href="#">智联招聘</a>
+                <a href="#">武汉人才网</a>
+                <a href="#">北京旅游攻略</a>
+                <a href="#">江门人才网</a>
+            </div>
+
+        </div>
+        <!--底部内容-->
+        <div class="buttom">
+            <div class="but-1">
+                <div>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">法律声明</a></li>
+                        <li><a href="#">保密承诺</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">网站地图</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">招聘信息</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">进入聘多多</a></li>
+
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">客户服务中心</a></li>
+                        <li>服务热线：010-53981544</li>
+                        <li>周一至周五9:00-18:00</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="but-2">
+                <p>未经highpin.cn同意,不得转载本网站之所有招聘信息及作品 聘多多版权所有 2013-2018 京
+                    ICP备12025925号 京ICP证010207号京公网安备 11010502034026号</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="./static/js/utils.js"></script>
+<script src="./static/js/index.js"></script>
+<script>
+loadLals()
+  function loadLals() {
+//隐藏的标签
+    //变量 用来临时存储语句
+    // let vm=this
+    let ms_a = '';
+    let items = '';
+    let lal = '';
+    let a, k;
+    let hidden_item = '';
+    let hidden_items = '';
+    let items_lal = '';
+
+//显示标签
+    let height = 565 ;//第一个隐藏标签的高度
+    let lals = this.lals;
+    console.log(lals);
+    // console.log(lals);
+
+    let main_top_left = document.querySelector("div.main-top-left");
+    for (let index = 0; index < lals.length; index++) {
+      let as = "";
+      let max_len = 4;
+
+      for (let i = 0; i < lals[index].category_list_a.length && i < max_len; i++)
+        as += '<a href="">' + lals[index].category_list_hot[i] + '</a>';
+      let id = "item0" + index;
+      main_top_left.innerHTML += `
+    <div id=${id} class="item">
+                    <label for="">${lals[index].category_list_type}</label>
+                    ${as}
+
+                 <div class="item-icon"></div>
+</div> `;
+
+
+      items_lal = '';
+      let firstlal = '';
+      let firstitem = '';
+      for (let i = 0; i < lals[index].menu_sub.length; i++) {
+
+        for (k in lals[index].menu_sub[i]) {
+          ms_a = '';
+
+          for (a in lals[index].menu_sub[i][k]){
+            //将标签中的数据传给url
+            let h_url="../pages/search.html?"+lals[index].menu_sub[i][k][a];
+
+            ms_a += '<a href='+h_url+'>' + lals[index].menu_sub[i][k][a] + '</a>';
+          }
+
+
+          items = '<div class="items">' + ms_a + '</div>';
+          if (i == 0) {
+            firstitem = '<div class="items">' + ms_a + '</div>';
+            firstlal = '<label for="">' + k + '</label>';
+          }
+
+          else {
+            lal = '<label for="">' + k + '</label>';
+
+            items_lal += lal + items;
+          }
+
+
+        }
+
+
+        hidden_item = '<div class="hidden-item">'
+          + ' <div class="label-header" >' + firstlal +
+          '</div>' + firstitem + items_lal + '</div>';
+
+
+      }
+      hidden_items = '<div class="hidden-items">' + hidden_item + '</div>';
+      // console.log(hidden_items);
+      main_top_left.innerHTML += `${hidden_items}`;
+
+
+      // 处理位置
+      let hidden = document.querySelectorAll('div.hidden-items')[index];
+      hidden.style.top += height + 'px';
+      height += 50;
+
+      //
+
+
+    }
+
+
+
+
+
+    // 动态生成隐藏标签
+    // 需要循环的地方很多
+    // 1. a
+    // 2. label
+    // 3.items
+    // 4.hiddle-item
+
+
+    // 1. 定位到 hidden-items
+
+
+    // let hidden_items=document.querySelector("div.hidden-items");
+
+    // 循环 hidden-items 标签
+
+  }
+</script>
+</body>
+</html>

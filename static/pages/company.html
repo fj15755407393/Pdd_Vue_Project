@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公司</title>
+    <!--<link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.css">-->
+    <!--<link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap-theme.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--<script src="../bootstrap-3.3.7/dist/js/bootstrap.js"></script>-->
+    <link rel="stylesheet" href="../css/company.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=b5y5hv8N6qEaicfy3ZsbD9mbviIgKkwF">
+        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=E7kSqLeZeSrU7Cm7KMRgv4OiP8oPKNt7"
+        //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
+    </script>
+
+
+</head>
+<body>
+<div class="container">
+
+
+    <div class="header">
+        <div class="h1">
+            <div class="col-md-1"><a href="../index.html">logo</a></div>
+            <div class="col-md-1">image</div>
+            <div class="col-md-7"></div>
+            <div class="col-md-1 text-right login"><a href="./login.html">登录</a></div>
+            <div class="col-md-1 text-center regist">|</div>
+
+            <div class="col-md-1 text-left"><a href="./regist.html">注册</a></div>
+
+
+        </div>
+        <div class="h2">
+            <!--导航-->
+            <div class="col-md-1 col-md-offset-4"><a href="../index.html">首页</a></div>
+            <div class="col-md-1"><a href="./company.html">公司</a></div>
+            <div class="col-md-1"><a href="">校园</a></div>
+            <div class="col-md-1"><a href="./forum.html">论坛</a></div>
+            <div class="col-md-1"></div>
+
+        </div>
+
+    </div>
+    <!--公司的信息-->
+    <div class="top">
+        <!--<div class="col-md-2 c-image ">-->
+
+
+        <!--</div>-->
+
+        <!--<div class="col-md-10 top-right">-->
+            <!--<diV class="base">-->
+                <!--&lt;!&ndash;公司的名称 和公司的官网&ndash;&gt;-->
+                <!--<a href="https://www.pingxx.com/?from=5&desc=lagou" class="c-name">Ping++ </a>-->
+                <!--<span class="glyphicon glyphicon-paperclip"></span>-->
+                <!--&lt;!&ndash;公司的关键字&ndash;&gt;-->
+                <!--<div class="c-word">聚合支付 SaaS 服务商</div>-->
+
+
+            <!--</diV>-->
+            <!--<diV class="mess">-->
+                <!--<div class="col-md-2 mess-item text-center item1">-->
+                    <!--<div class="c-count">32个</div>-->
+                    <!--<div class="c-mess">招聘职位 <span class="glyphicon glyphicon-question-sign"></span></div>-->
+                <!--</div>-->
+                <!--<div class="col-md-2 mess-item text-center item2">-->
+                    <!--<div class="c-count">100%</div>-->
+                    <!--<div class="c-mess">简历及时处理率 <span class="glyphicon glyphicon-question-sign"></span></div>-->
+                <!--</div>-->
+                <!--<div class="col-md-2 mess-item text-center item3">-->
+                    <!--<div class="c-count">1天</div>-->
+                    <!--<div class="c-mess">简历处理时间 <span class="glyphicon glyphicon-question-sign"></span></div>-->
+                <!--</div>-->
+                <!--<div class="col-md-2 mess-item text-center item4">-->
+                    <!--<div class="c-count">100个</div>-->
+                    <!--<div class="c-mess">面试评价 <span class="glyphicon glyphicon-question-sign"></span></div>-->
+                <!--</div>-->
+                <!--<div class="col-md-2 mess-item text-center item5">-->
+                    <!--<div class="c-count">7天内</div>-->
+                    <!--<div class="c-mess">企业最近登录 <span class="glyphicon glyphicon-question-sign"></span></div>-->
+                <!--</div>-->
+
+
+            <!--</diV>-->
+        </div>
+
+
+    </div>
+
+    <div class="nav-item">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">公司主页</a></li>
+            <li role="presentation"><a href="#">招聘职位</a></li>
+            <li role="presentation"><a href="#">校招职位</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+
+        <!--main-left-->
+        <div class="main-left col-md-8">
+
+
+            <!--条目-->
+            <div class="ml-item">
+                <div class="item-line">
+                    <div class="intro">公司介绍</div>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                </div>
+                <div class="text-area">
+                    <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--Ping++ 始于 2014 年，伴随着中国移动支付大爆炸而生，是上海简米网络科技有限公司旗下的聚合支付品牌。</p>-->
+                    <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--最初，我们从一间 10 平米的会议室起步，希望用支付连接价值，致力于彻底改变移动支付的接入方式，让每一个 App 都能轻松接入支付。</p>-->
+                    <!--<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--现如今，从安全可靠的聚合支付平台到简单无忧的聚合支付云服务，Ping++ 帮助 20000-->
+                        <!--多家企业客户解决支付问题，典型客户包括小牛电动、丁香诊所、方太厨具、小红书、映客等，涉及电商、O2O、教育、旅游、直播、医疗等众多领域，全面覆盖红包转账、报名收费、扫码签到、打赏抽奖、卡券营销、多级分成等多样化的支付场景。</p>-->
+                    <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--Ping++-->
+                        <!--正在为这个世界提供一种全新的支付服务，不仅极大地简化了企业与移动支付渠道和消费分期渠道的对接过程，还将日常交易管理，查账对账，数据分析功能集成到统一的管理平台。从支付接入、交易处理到业务运营，我们以定制化全流程的解决方案来帮助企业应对在商业变现环节可能面临的一切问题。</p>-->
+                    <div><a href="">收起 <span class="glyphicon glyphicon-menu-up"></span></a></div>
+
+
+                </div>
+
+
+                <div class="item-line">
+                    <div class="intro">公司位置</div>
+                    <div class="hr">
+                        <hr>
+                    </div>
+
+                </div>
+
+
+                <div class="c-address">
+
+                    <!--地图-->
+                    <div id="c-addr-left">
+
+
+                    </div>
+                    <!--地址信息-->
+                    <div class="c-addr-right scrollbar-hover">
+                        <div id="accordion">
+
+                        </div>
+
+                        <!--<div class="addr-title" data-toggle="tooltip" data-placement="bottom" title="上海市浦东新区"><a-->
+                                <!--href="">上海市,浦东...</a></div>-->
+                        <!--&lt;!&ndash;标签 办公区域&ndash;&gt;-->
+                        <!--<div class="addr-businessarea">-->
+                            <!--<div class="bus-item ">张江</div>-->
+
+                        <!--</div>-->
+                        <!--&lt;!&ndash;详细地址&ndash;&gt;-->
+                        <!--<div class="addr-desc">上海浦东新区碧波路912弄11号楼</div>-->
+                        <!--<hr>-->
+                        <!--<div class="addr-res">-->
+                            <!--该公司共有 <span>1</span> 个地址-->
+                        <!--</div>-->
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="ml-item">
+                <div class="item-line">
+                    <div class="intro">在招职位</div>
+                    <div class="hr">
+                        <hr>
+                    </div>
+                </div>
+                <div class="inviting-item">
+
+
+                </div>
+
+
+                <!--<div class="item-line">-->
+                    <!--<div class="intro">公司位置</div>-->
+                    <!--<div class="hr">-->
+                        <!--<hr>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+
+                <!--<div class="c-address">-->
+
+                    <!--&lt;!&ndash;地图&ndash;&gt;-->
+                    <!--<div id="c-addr-left">-->
+
+                    <!--</div>-->
+                    <!--&lt;!&ndash;地址信息&ndash;&gt;-->
+                    <!--<div class="c-addr-right">-->
+
+                        <!--<div class="addr-title" data-toggle="tooltip" data-placement="bottom" title="上海市浦东新区"><a-->
+                        <!--href="">上海市,浦东...</a></div>-->
+                        <!--&lt;!&ndash;标签 办公区域&ndash;&gt;-->
+                        <!--<div class="addr-businessarea">-->
+                        <!--<div class="bus-item ">张江</div>-->
+
+                        <!--</div>-->
+                        <!--&lt;!&ndash;详细地址&ndash;&gt;-->
+                        <!--<div class="addr-desc">上海浦东新区碧波路912弄11号楼</div>-->
+                        <!--<hr>-->
+                        <!--<div class="addr-res">-->
+                        <!--该公司共有 <span>1</span> 个地址-->
+                        <!--</div>-->
+                <!--<div id="accordion">-->
+                    <!--<p>-->
+                    <!--<div class="addr-title" data-toggle="tooltip" data-placement="bottom" title="上海市浦东新区">-->
+                        <!--<a href="#collapseExample1" data-toggle="collapse" data-parent="#accordion" class="btn btn-link">上海市,浦东...</a>-->
+                    <!--</div>-->
+                    <!--</p>-->
+                    <!--<div class="collapse in" id="collapseExample1">-->
+                        <!--<div class=" with-padding">-->
+                            <!--<div class="addr-businessarea">-->
+                                <!--<div class="bus-item ">张江</div>-->
+                            <!--</div>-->
+                            <!--<div class="addr-desc">上海浦东新区碧波路912弄11号楼</div>-->
+
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div> &lt;!&ndash;-end accordion >-->
+
+                    <!--</div>-->
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="main-right col-md-4">
+
+            <div class="item-line">
+                <div class="intro">公司基本信息</div>
+                <div class="hr">
+                    <hr>
+                </div>
+            </div>
+
+            <ul class="base-message">
+                <!--<li class="glyphicon glyphicon-th-large">&nbsp;企业服务,金融</li>-->
+                <!--<li class="glyphicon glyphicon-grain">&nbsp;B轮</li>-->
+                <!--<li class="glyphicon glyphicon-user">&nbsp;50-150人</li>-->
+                <!--<li class="glyphicon glyphicon-map-marker">&nbsp;上海</li>-->
+
+
+            </ul>
+
+
+            <div class="item-line il">
+                <div class="intro">管理团队</div>
+                <div class="hr">
+                    <hr>
+                </div>
+            </div>
+
+
+            <div class="manager">
+                <!--<div class="m-header"></div>-->
+                <!--<div class="m-name">金亦冶</div>-->
+                <!--<div class="m-position">CEO</div>-->
+                <!--<div class="m-intro">斯坦福 EE。如果不是在创业，他应该会在印度禅修，徒行，写赞美诗。</div>-->
+
+            </div>
+
+
+            <div class="item-line il">
+                <div class="intro">公司标签</div>
+                <div class="hr">
+                    <hr>
+                </div>
+            </div>
+
+            <div class="labels">
+                <!--<div class="col-md-4 lal">技能培训</div>-->
+                <!--<div class="col-md-4 lal">岗位竞争</div>-->
+                <!--<div class="col-md-4 lal">年度旅游</div>-->
+                <!--<div class="col-md-4 lal">五险一金</div>-->
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script src="../js/baidumap.js"></script>
+<script src="../js/company.js"></script>
+<script src="../js/utils.js"></script>
+</body>
+</html>

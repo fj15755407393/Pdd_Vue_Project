@@ -1,0 +1,368 @@
+
+.container {
+    padding: 0;
+    margin: 0;
+
+}
+a{
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+
+}
+
+.container {
+
+    width: 100%;
+
+}
+
+div.header {
+
+}
+
+div.header > div.h1 {
+    margin: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #4a4a4a;
+
+}
+
+div.col-md-1.text-center {
+    width: 5px;
+}
+
+div.header > div.h1 > div, a {
+
+    font-size: 15px;
+    color: rgba(180, 180, 180, 0.98);
+    line-height: 30px;
+}
+
+div.header > div.h1 a:hover {
+
+    color: white;
+
+}
+
+div.h1:nth-child(1) {
+    padding-left: 98px;
+
+}
+
+div.h2 {
+    margin-top: 0;
+    height: 56px;
+    border-bottom: 1px rgba(128, 128, 128, 0.69) solid;
+
+}
+
+div.h2 a {
+    font-size: 18px;
+    line-height: 56px;
+}
+
+div.h2>div {
+    padding: 0 20px;
+
+    text-align: center;
+    width: 80px;
+
+}
+
+div.h2 > div:hover {
+    box-sizing: border-box;
+    border-bottom: #4f4faf 1px solid;
+    color: black;
+}
+
+/*-----------------------top----------------*/
+div.top {
+    margin: auto;
+    margin-top: 38px;
+    width: 1024px;
+    height: 168px;
+    /*background-color: grey;*/
+    border: 1px #b4b4b4 solid;
+
+}
+
+div.top > div {
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+div.c-image {
+    border-right: 1px #b4b4b4 solid;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+div.top-right {
+    padding: 0;
+
+}
+
+div.base {
+    padding: 15px;
+    height: 100px;
+
+    /*background: red;*/
+    border-bottom: 1px solid rgba(128, 128, 128, 0.33);
+
+}
+
+div.base > a {
+
+    font-size: 20px;
+    color: black;
+
+}
+
+span.glyphicon.glyphicon-paperclip {
+    color: rgba(128, 128, 128, 0.59);
+}
+
+div.mess {
+    height: 66px;
+    padding-top: 10px;
+    background-color: #fafafa;
+
+}
+
+div.mess-item {
+    padding: 0;
+    width: 120px;
+
+    border-right: 1px rgba(128, 128, 128, 0.28) solid;
+
+}
+
+div.mess-item > div.c-count {
+    font-size: 17px;
+}
+
+div.mess-item > div.c-mess {
+    color: rgba(128, 128, 128, 0.65);
+    font-size: 14px;
+}
+ul.nav>li>a{
+
+    font-size: 18px;
+}
+/*------------------main----------------*/
+
+div.nav-item {
+    margin: auto;
+    margin-top: 50px;
+    width: 1200px;
+
+}
+
+/*main-left*/
+
+div.main {
+    padding-top: 25px;
+    margin: 0 auto;
+    width: 1150px;
+
+}
+
+div.main-left {
+
+
+
+}
+
+div.item-line {
+    overflow: hidden;
+}
+
+div.item-line>div {
+    float: left;
+
+}
+
+div.item-line>div.intro {
+
+    /*width: 15%;*/
+    font-size: 18px;
+    position: relative;
+    top: 10px;
+}
+
+div.item-line>div.hr {
+    margin-left: 10px;
+    width: 85%;
+
+}
+
+div.text-area {
+
+    padding: 10px;
+}
+
+div.text-area > div {
+    margin-left: 80%;
+
+}
+
+div.text-area > div > a {
+    color: rgba(172, 191, 255, 0.81);
+}
+div.c-address{
+    overflow: hidden;
+
+}
+#c-addr-left {
+    float: left;
+    margin-top: 30px;
+    width: 430px;
+    height: 300px;
+    /*background-color: red;*/
+}
+
+div.c-addr-right {
+    /*overflow-x: hidden;*/
+    overflow-y: auto;
+
+    float: left;
+    margin-top: 30px;
+    width: 270px;
+    height: 300px;
+    border: rgba(117, 117, 117, 0.3) 1px solid;
+    border-left: none;
+    padding: 0 15px;
+}
+
+div.addr-title {
+
+    margin-top: 2px;
+
+}
+
+div.addr-title > a {
+    padding: 0;
+    font-size: 17px;
+
+    color: black;
+
+}
+div.addr-title > span{
+    color: dodgerblue;
+}
+div.addr-title > a:hover{
+
+
+
+}
+
+div.addr-businessarea {
+
+    margin-top: 2px;
+}
+
+div.addr-businessarea > div {
+    text-align: center;
+    width: 50px;
+    height: 22px;
+    border: grey 1px solid;
+    border-radius: 25px 25px;
+    color: grey;
+
+}
+
+div.addr-desc {
+    margin-top: 10px;
+    color: grey;
+
+}
+div.addr-res{
+    text-align: center;
+    font-size: 17px;
+}
+div.addr-res>span{
+    color: dodgerblue;
+}
+
+/*main-right*/
+div.main-right{
+
+  border-left: rgba(128, 128, 128, 0.36) 2px solid;
+/*margin-top: 0;*/
+
+    /*background-color: red;*/
+
+}
+
+div.main-right>div.item-line>div.hr{
+    width: 65%;
+}
+ul.base-message>li{
+
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 30%;
+    display: block;
+    font-size: 16px;
+}
+div.main-right>div.il>div.hr{
+    width: 75%;
+
+
+
+}
+div.manager{
+  padding-bottom: 20px;
+
+}
+div.manager>div{
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+}
+div.manager>div.m-header{
+
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50% 50%;
+
+
+
+
+
+}
+div.m-name{
+    font-size: 18px;
+}
+div.m-position{
+
+    color: grey;
+}
+div.m-intro{
+    padding: 5px;
+
+    width: 70%;
+    height: 100px;
+    overflow-y: auto;
+}
+
+
+
+
+div.labels>div{
+    width: 30%;
+    height: 25px;
+    text-align: center;
+    overflow-y: hidden;
+    margin: 5px ;
+    border: rgba(128, 128, 128, 0.31) 1px solid;
+    border-radius: 25px;
+}

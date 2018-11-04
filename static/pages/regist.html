@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聘多多</title>
+    <link rel="stylesheet" href="../css/regist_login.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-logo">
+            <a href="#" class="logo" >
+                <!--<img src="//www.lgstatic.com/passport/static/pc/modules/common/img/logo_e420e46.png" alt="">-->
+            </a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-regist">
+            <div class="regist-right">
+                <div class="right-content">
+                    <div class="signup-h3">注册聘多多</div>
+                    <span id="error">手机号已注册，请直接登录</span>
+                    <div class="use-phone">
+                        <span>使用手机号注册</span>
+                    </div>
+                    <div class="i-want">
+                        <span class="cur" name="1">我要找工作</span>
+                        <span class="cur1" name="0">我要招聘</span>
+                    </div>
+                    <div class="inpu">
+                        <div class="user-telephone">
+                            <div class="phone">
+                                <input type="text" name="phone1" class="phone1" placeholder="手机号">
+                            </div>
+                            <div class="phone-logo">
+                            </div>
+                        </div>
+                        <div class="user-check">
+                            <div class="u-check">
+                                <input type="text" name="verifyCode" class="check1" placeholder="验证码">
+                            </div>
+                            <div class="u-check-logo"></div>
+                        </div>
+                        <div  class="random-code" id="random-code"></div>
+                        <div class="message-check">
+                            <div class="me-check">
+                                <input type="text" name="userid" class="check2" placeholder="短信验证码">
+                            </div>
+                            <div class="me-check-logo">
+                            </div>
+                            <div class="send-check">
+                                <span class="hurry-get" style="text-align: center">立即获取</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chk-auto">
+                        <div class="check-agree">
+                            <input type="checkbox" id="chk_auto" checked>
+                            <label for="chk_auto" >
+                                <span class="span-agree">同意聘多多<a href="">用户协议</a></span>
+                            </label>
+                        </div>
+                        <div class="check-login">
+                            <span class="span-agree">已有账户?<a href="2-login.html">[登录]</a></span>
+                        </div>
+                    </div>
+                    <div class="regist-btn">
+                        <button class="regist-free" type="submit">免费注册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="footer"></div>
+</div>
+<script src="../js/regist.js"></script>
+<script src="../js/random_code.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/regist_click.js"></script>
+<!--调用-->
+</body>
+</html>

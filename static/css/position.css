@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.top{
+  width: 100%;
+  height: 60px;
+  /*background-color: #F7F9FA;*/
+  padding: 0px auto;
+
+
+}
+.header2-css{
+    height: 220px;
+    width: 100%;
+    background-color: rgba(244, 244, 244, 0);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.27);
+}
+.header2-css .left-mess{
+    float: left;
+    padding-left: 200px;
+    margin-top: 40px;
+}
+.header2-css .left-mess div span{
+    display: block;
+}
+.header2-css .left-mess p span{
+    font-size: 15px;
+}
+.header2-css .left-mess p span:first-child{
+    color: #ff6000;
+}
+
+.header2-css .left-mess div span:nth-child(2){
+    font-size: 30px;
+}
+.header2-css .right-mess{
+    float: right;
+    margin-right: 260px;
+    /*position: fixed;*/
+    /*background-color: #ff6000;*/
+    margin-top: 60px;
+}
+.header2-css .right-mess a{
+    display: block;
+    text-decoration: none;
+    background-color: #00B38A;
+    border: 1px #d6d6d6 solid;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    float: left;
+    margin: 0 8px;
+}
+.all-body{
+    display: flex;
+
+}
+.left-body{
+    margin-left: 200px;
+    margin-top: 50px;
+    flex: 3;
+}
+.left-body dd{
+    padding: 15px 0 10px 0;
+}
+.left-body dd span{
+    font-size: 18px;
+    font-weight: bold;
+}
+.left-body dd p{
+    padding-top: 20px;
+    font-size: 15px;
+    color: #424242;
+}
+.left-body dd .namep-css{
+    font-size: 22px;
+}
+.right-body{
+    flex: 1;
+    /*background-color: #ff6000;*/
+    margin-right: 200px;
+    border-left: 1px solid rgba(119, 119, 119, 0.29);
+}
+.one-css div{
+    padding: 10px 15px 10px 15px ;
+    color: rgba(139, 139, 139, 0.16);
+}
+.one-css div:first-child{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3b3b3b;
+}
+
+.two-css span{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.two-css .divfl-css{
+    display: flex;
+    /*margin-top: 20px;*/
+    /*margin-left: 20px;*/
+}
+.span2-css{
+    margin-top: 20px;
+    display: block;
+    background-color: #cccccc;
+    font-weight: normal !important;
+    font-size: 18px !important;
+    text-align: center;
+
+}
+.span2-css a{
+    text-decoration: none;
+    color: #e1e1e1;
+}
+.two-css div div{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.two-css div:first-child{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 65px;
+    width: 65px;
+    background-color: #ff6000;
+}
+
+.two-css .small-css span{
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 0;
+}
+.blogroll{
+    /*height: 180px;*/
+    background-color: #EDEDED;
+    padding: 40px;
+    margin-top: 40px;
+}
+.blogroll span,a{
+    font-size: 15px;
+}
+.link-label{
+
+    /*padding-top: 40px;*/
+    box-sizing: border-box;
+    padding-bottom: 8px;
+    border-bottom: 1px solid  grey;
+}
+.link-label span:nth-child(1){
+    margin-right: 615px;
+
+}
+.link-label span:nth-child(2),.link-label span:nth-child(3){
+    color: grey;
+
+}
+.links{
+
+    margin-top: 10px;
+    overflow: hidden;
+}
+.links a {
+    display: inline-block;
+    color: grey;
+    height: 25px;
+    font-size: 15px;
+
+
+    margin-right: 20px;
+}
+.links a:hover{
+
+    text-decoration: underline;
+    color: black;
+
+}
+.buttom a,li,p{
+    color:grey;
+    font-size: 15px;
+}
+.buttom li{
+    margin-top: 10px;
+
+}
+.buttom a:hover{
+    text-decoration:underline;
+
+}
+.buttom{
+    background-color: #292829;
+    overflow: hidden;
+    padding: 30px;
+    padding-bottom: 10px;
+}
+.but-1{
+    /*height: 100px;*/
+    width: 700px;
+    margin: auto;
+    background-color: #2bffe7;
+}.but-1 div:nth-child(1){
+     margin-left: 20px;
+
+ }
+.but-1 div:nth-child(4){
+    margin-left: 100px;
+
+}
+.but-1>div{
+
+    float: left;
+    margin-right: 50px;
+
+}
+.but-2{
+    width: 700px;
+    margin: auto;
+    margin-top: 140px;
+    text-align: center;
+    /*background-color: #2bffe7;*/
+}
+
+ul.base-message>li{
+
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 30%;
+  display: block;
+  font-size: 16px;
+}
