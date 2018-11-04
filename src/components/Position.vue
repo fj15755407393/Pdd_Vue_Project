@@ -190,7 +190,7 @@
 
 
   <!--模态框位置-->
-  <Resuems_Modal v-bind:resumes="resumes"></Resuems_Modal>
+  <Resuems_Modal v-bind:resumes="resumes" v-bind:islogin="islogin" ></Resuems_Modal>
   </body>
 </template>
 
@@ -198,6 +198,7 @@
   import  Nav from '../components/generic_components/Nav'
   import  Resuems_Modal from '../components/generic_components/Resuems_Modal'
   import axios from 'axios'
+
 export default {
   name: 'position',
 
@@ -214,6 +215,7 @@ export default {
       selectresume:{} //选择的简历
     }
   },
+
   mounted:function(){
     this.isLogin();
     this.getUserId();
@@ -225,6 +227,7 @@ export default {
   components:{
     Nav,Resuems_Modal
   },
+
   watch:{
     islogin:function (newvalue,oldvalue) {
       console.log(newvalue);
@@ -232,7 +235,7 @@ export default {
       return newvalue}
   },
   filters:{
-    
+
 
   },methods:{
     //收藏
@@ -273,7 +276,7 @@ export default {
       }
 
 
-      
+
     },
     //取消收藏
     canclecollect:function(){
@@ -333,6 +336,7 @@ export default {
 
       })
     },
+
     //提交简历
     commit:function(){
       //判断是否登录
@@ -409,6 +413,7 @@ export default {
 
 
     },
+
     //接受从子组件传过来的值
     //获取用户
     getUser:function (data) {
@@ -443,7 +448,7 @@ export default {
         return null
     },
 
-    
+
   },
   // watch:{
   //   islogin:function () {
