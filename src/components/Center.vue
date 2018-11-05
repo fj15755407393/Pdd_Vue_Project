@@ -170,6 +170,7 @@
 
   .t {
     margin-top: 20px;
+    padding-left: 0;
   }
   .right-9{
     padding-top: 10px;
