@@ -8,7 +8,7 @@
   <div class="header2-css">
     <div class="left-mess">
       <div>
-        <span >{{data.company.c_name}}公司发布</span>
+        <span style="font-size: 1.2em">{{data.company.c_name}}公司发布</span>
         <span v-text="data.position.p_name"></span>
       </div>
       <p>
