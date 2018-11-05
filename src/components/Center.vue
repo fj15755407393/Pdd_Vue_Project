@@ -7,7 +7,7 @@
       <div class="bg-boxtop"></div>
       <div class="bg-content">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 left-3">
             <ul class="list-group">
               <li class="list-group-item">
                 <router-link to="/center/base/">基本信息</router-link>
@@ -23,7 +23,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9 right-9">
             <!--<Cput></Cput>-->
             <!--<Cresume></Cresume>-->
             <router-view>
@@ -170,6 +170,18 @@
 
   .t {
     margin-top: 20px;
+  }
+  .right-9{
+    padding-top: 10px;
+    border-left: 1px solid rgba(128, 128, 128, 0.2);
+    padding-bottom: 15px;
+
+
+  }
+  .left-3 {
+    padding-top: 10px;
+   padding-left: 35px;
+
   }
 
 </style>
