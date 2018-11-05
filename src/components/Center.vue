@@ -125,7 +125,8 @@
   .list-group {
     overflow: hidden;
     width: 200px;
-    font-size: 1em;
+    font-size: 1.2em;
+    box-sizing: border-box;
     /*margin-left: 40px;*/
     /*margin-top: 60px;*/
     /*margin-bottom: 30px;*/
@@ -137,14 +138,16 @@
   }
 
   .list-group-item {
-    border: 2px solid #eee;
+    box-shadow:  0 0 0 2px #eee;
+
   }
 
   .list-group-item:hover {
+
     font-weight: bold;
     color: #ff6000;
     background-color: #fffff9;
-    border: 1px solid #eee;
+    box-shadow:  0 0 0 1px  #eee;
     border-right-color: #fff;
     border-left: 2px solid #ff6000;
   }
