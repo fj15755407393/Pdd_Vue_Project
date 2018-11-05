@@ -28,7 +28,7 @@
     <div class="right-mess">
       <a href="javascript:void(0);"@click="canclecollect" v-if="iscolected">已收藏</a>
       <a href="javascript:void(0);"@click="collect" v-else>收藏</a>
-      <a class="commit" @click="commit" data-toggle="modal" :data-target="islogin? '#resumeModal':'' " >提交简历</a>
+      <a class="commit"  @click="getResuemByuid" data-toggle="modal" :data-target="islogin? '#resumeModal':'' " >提交简历</a>
     </div>
   </div>
   <div class="all-body">
@@ -221,6 +221,7 @@ export default {
     this.getUserId();
     this.getPositionBypid();
     // alert(this.islogin);
+    if(this.islogin)
     this.getResuemByuid()
 
   },
@@ -319,57 +320,67 @@ export default {
     },
     //获取用户的所有简历
     getResuemByuid:function(){
+
       let vm=this;
-      axios.get('http://127.0.0.1:8000/resume/getresumesbyuid',{
-        headers:{
-          'token':sessionStorage.getItem('token')
-        },
-        params:{
-
-        }
-      }).then(function (response) {
-        vm.resumes=response.data;
-        console.log(vm.resumes);
-
-      }).catch(function (error) {
-        console.log(error);
-
-      })
-    },
-
-    //提交简历
-    commit:function(){
-      //判断是否登录
-      if(this.islogin){
-
-        // 添加投递简历
-        let vm=this;
-        this.pid=this.$route.params.pid;
-        axios.get('http://127.0.0.1:8000/resume/commit/',{
+      if(this.islogin&&vm.resumes){
+        axios.get('http://127.0.0.1:8000/resume/getresumesbyuid',{
+          headers:{
+            'token':sessionStorage.getItem('token')
+          },
           params:{
-            'position_id':vm.pid,
-            'resume_id':'1'
+
           }
         }).then(function (response) {
-          // vm.resumes=response.data;
-          // console.log(vm.resumes);
+          vm.resumes=response.data;
+          console.log(vm.resumes);
+
         }).catch(function (error) {
           console.log(error);
 
         })
-
       }
       else {
-        let commit=document.querySelector('.commit');
         alert('请先登录')
         sessionStorage.setItem('from',this.$route.path)
         this.$router.push('/login/')
 
       }
 
-
-
     },
+
+    //提交简历
+    // commit:function(){
+    //   //判断是否登录
+    //   if(this.islogin){
+    //
+    //     // 添加投递简历
+    //     let vm=this;
+    //     this.pid=this.$route.params.pid;
+    //     axios.get('http://127.0.0.1:8000/resume/commit/',{
+    //       params:{
+    //         'position_id':vm.pid,
+    //         'resume_id':'1'
+    //       }
+    //     }).then(function (response) {
+    //       // vm.resumes=response.data;
+    //       // console.log(vm.resumes);
+    //     }).catch(function (error) {
+    //       console.log(error);
+    //
+    //     })
+    //
+    //   }
+    //   else {
+    //     let commit=document.querySelector('.commit');
+    //     alert('请先登录')
+    //     sessionStorage.setItem('from',this.$route.path)
+    //     this.$router.push('/login/')
+    //
+    //   }
+    //
+    //
+    //
+    // },
     //是否登录
     isLogin: function () {
       let vm=this;
