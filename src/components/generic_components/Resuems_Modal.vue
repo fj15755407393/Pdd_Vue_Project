@@ -85,6 +85,11 @@ export default {
           vm.data=response.data;
           console.log(vm.data);
           document.querySelector('.topic-close').click()
+          if(response.data.status==200){
+            alert('投递成功')
+          }
+          else
+            alert('该岗位已投递')
 
 
         }).catch(function (error) {
