@@ -130,11 +130,9 @@ export default {
       msg: '',
       company:{},
       cid:'',
-      managers:[{m_image:''}],//初始化处理为定义的错误
+      managers:[],
       display:0,
-      addrs:[{fields:{
-        a_id:''
-        }}],//初始化处理为定义的错误
+      addrs:['ss'],
       isAcitive:1
 
     }
@@ -148,8 +146,6 @@ export default {
       return (this.company.c_lals||'').split(',')
     },
     manager:function () {
-      // this.managers[this.display]['m_img']='';
-      console.log(this.managers[this.display]);
       return this.managers[this.display]
 
 
@@ -161,6 +157,7 @@ export default {
     this.getManagerByid(this.cid);
     this.getAddrById(this.cid);
   },
+
   methods:{
     getId:function(){
 
@@ -172,7 +169,6 @@ export default {
     getCompanyById: function (cid) {
 
       let vm=this;
-
 
       axios.get('http://127.0.0.1:8000/company/getcompanybyid/'+cid).then(function (reponse) {
         // console.log( typeof reponse.data );

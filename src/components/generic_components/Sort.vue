@@ -10,10 +10,7 @@
       <li class="li1-css" >
         <input type="text" placeholder="不限" id="input1">
         <div id="pay" class="xiangdui">
-          <a href="#">不限</a>
-          <a href="#">5k</a>
-          <a href="#">10k</a>
-          <a href="#">15k</a>
+
         </div>
       </li>
     </ul>

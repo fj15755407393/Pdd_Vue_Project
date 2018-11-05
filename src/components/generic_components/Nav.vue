@@ -149,13 +149,10 @@ export default {
     box-shadow: 0 0 1px grey;
     z-index: 1000;
   }
-  .user>ul li,.user>ul li a{
-    color: rgba(41, 45, 48, 0.68);
-  }
   .user>ul:hover >li {
 
     display: block;
-    /*color: black;*/
+    color: black;
   }
 .user ul li:hover{
   color: blue;

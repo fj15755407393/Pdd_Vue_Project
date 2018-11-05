@@ -197,7 +197,12 @@
         if (!this.checkcode){
           this.check_tip='请输入验证码';
           flag=false
+
         }
+        if (this.check_correct) {
+          flag=false
+        }
+
         var vm=this
         if (flag){
           axios.post('http://127.0.0.1:8000/user/login/',{

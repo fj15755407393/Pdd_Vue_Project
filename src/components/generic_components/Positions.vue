@@ -134,12 +134,13 @@
 
 
       },
+
       //加载岗位显示
       loadPosition: function (min, max) {
       //设置默认值
 
-        let vm=this
-        let len=vm.positions.length
+        let vm=this;
+        let len=vm.positions.length;
         for (let index = min; index < max&&index<len; index++) {
           this.display_positions.push(this.positions[index])
         }

@@ -16,6 +16,8 @@ import Center from '@/components/Center'
 import Search from '@/components/Search'
 import  BaseMessage from '../components/generic_components/BaseMessage'
 import  ResumeCenter from '../components/generic_components/ResumeCenter'
+import  DeliveryRecord from '../components/generic_components/DeliverRecord'
+import Cput from '../components/generic_components/Cput'
 
 
 
@@ -82,6 +84,11 @@ export default new Router({
         { path:'/center/resume/',
           name:'resumecenter',
           component:ResumeCenter
+        },
+
+        { path:'/center/delivery_record/',
+          name:'delivery_record',
+          component:DeliveryRecord
         }
       ]
 

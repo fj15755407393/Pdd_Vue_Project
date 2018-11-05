@@ -1,17 +1,17 @@
 <template>
   <div class="search">
   <ul>
-    <li class="li01-css" @click="getPositionByaddr">
+    <li class="li01-css">
       <div>
         工作地点:
       </div>
       <a href="#" class="a1-css">全国</a>
-      <a href="#" @click="getPositionByaddr">北京</a>
-      <a href="#">上海</a>
-      <a href="#">杭州</a>
-      <a href="#">苏州</a>
-      <a href="#">成都</a>
-      <a href="#">重庆</a>
+      <a href="#" @click="getPositionByaddr('北京')" data_set="北京">北京</a>
+      <a href="#" @click="getPositionByaddr('上海')" data_set="上海">上海</a>
+      <a href="#" @click="getPositionByaddr('杭州')" data_set="杭州">杭州</a>
+      <a href="#" @click="getPositionByaddr('苏州')" data_set="苏州">苏州</a>
+      <a href="#" @click="getPositionByaddr('成都')" data_set="成都">成都</a>
+      <a href="#" @click="getPositionByaddr('重庆')" data_set="重庆">重庆</a>
     </li>
     <div class="clear"></div>
     <li class="li02-css" @click="getPositionByexp"><div>工作经验:</div>
@@ -80,30 +80,60 @@
 </template>
 
 <script>
+  import $ from 'jquery'
+  import axios from'axios'
+
     export default {
         name: "searchItem",
-        props:[
-          'list'
-        ],
+
       data:function () {
         return {
-          con:''
+          con:'',
+          result_position:[],
+          list:[]
         }
       },
+      mounted:function(){
+        this.getAllposition()
+      },
+
       methods:{
-          getPositionByaddr:function () {
-            if(this.con){
-              result_position=[];
-              for(var pos in list){
-                result=pos.addr;
-                if(result.match(this.con)){
-                  result_position.push(pos)
+          getAllposition:function(){
+              var vm = this;
+              axios.get('http://localhost:8000/position/getAllpositions/')
+                .then(function (response) {
+                  vm.list = eval('('+response.data+")");
+                  console.log(vm.list)
+                })
+                .catch(function (error) {
+                  console.log(error)
+                })
+            },
+          getPositionByaddr:function (ad) {
+            // console.log(this.list)
+            let li = document.querySelectorAll('[data_set]');
+            for(let l of li){
+              // console.log(l.text)
+              if(ad == l.text){
+                this.con = ad;
+                if(this.con){
+                  this.result_position=[];
+
+                  for(var pos of this.list){
+                    let result=pos.addr;
+                    // console.log(result)
+                    if(result.indexOf(ad)!==-1){
+                      this.result_position.push(pos)
+                    }
+                  }
+                  console.log(this.result_position);
+                  this.$emit('getlist',this.result_position)
                 }
+
               }
-              list=result_position;
-              this.$emit('Itemclick',list);
-              console.log(list,text)
             }
+
+
           },
         getPositionByexp:function () {
           if(this.con){

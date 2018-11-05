@@ -46,6 +46,6 @@
 
 <style scoped>
   .pagination{
-margin-left: 220px;
+    margin: 0 auto;
   }
 </style>

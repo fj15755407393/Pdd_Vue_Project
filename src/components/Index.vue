@@ -133,6 +133,7 @@
 
 
     },
+
     methods:{
 
       changePos:function () {
@@ -144,14 +145,15 @@
 
       },
       isLogin: function () {
-        let token=sessionStorage.getItem('token');
-        // console.log( token);
+        var token=sessionStorage.getItem('token');
+        console.log( token);
         if(token){
           let vm=this
           axios.post('http://127.0.0.1:8000/user/verify/',
             {
               token:token
             }
+
           ).then(function (response) {
             let res=response.data
             console.log(res);
@@ -159,14 +161,13 @@
 
 
           }).catch(function (error) {
-            vm.islogin= false
+            vm.islogin= false;
             console.log(error);
 
           })
         }
         // axios.get()
-
-      }
+      },
 
     },
     computed:{

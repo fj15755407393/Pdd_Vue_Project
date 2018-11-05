@@ -258,21 +258,9 @@ export default {
   data () {
     return {
       msg: ' ',
-      topics:[],//从后台取到的帖子
-      display_topics:[],//页面渲染的帖子
-      topic_content:[],//帖子内容
-      topic_back:[],//帖子回复
+      comments:[],//从后台取到的帖子
+      display_comments:[],//页面渲染的帖子
     }
-  },
-  mounted:function(){
-    this.getTopics();
-    this.getTopicContents();
-    this.getTopicBack();
-
-
-  },
-  computed:{
-
   },
   methods:{
     //切换
@@ -287,12 +275,12 @@ export default {
 
 
     },
-    //获取帖子
-    getTopics:function () {
+    //获取总的评论数
+    getComments:function () {
       let vm=this;
-      axios.get('http://127.0.0.1:8000/forum/getforum_topic/').then(function (response) {
-        vm.topics=response.data
-        console.log(vm.topics);
+      axios.get('http://127.0.0.1:8000/forum/getcomments/').then(function (response) {
+        this.comments=response.data
+        console.log(this.comments);
 
       }).catch(function (error) {
         console.log(error);
@@ -300,59 +288,7 @@ export default {
       })
 
 
-    },
-    //获取帖子内容
-    getTopicContents:function () {
-      let vm=this;
-      axios.get('http://127.0.0.1:8000/forum/getforum_topic_content/').then(function (response) {
-        vm.topic_content=response.data
-        console.log(vm.topic_content);
-
-      }).catch(function (error) {
-        console.log(error);
-
-      })
-
-
-    },
-    getTopicJson:function(topic_back) {
-      let result=[]
-      for (let tb of  topic_back)
-        if(tb.fields.forum_topic_back_id!='null')
-          for(let t of  topic_back)
-            if(t.pk==tb.fields.forum_topic_back_id&&tb.fields.forum_topic_id=='null'){
-              result.push(tb)
-              tb.fields.forum_topic_back_id=t.fields
-            }
-      if(result.length>0)
-      {console.log(result);
-        // this.getTopicJson(result);
-        }
-
-      else
-        return topic_back
-
-
-    },
-    //获取帖子回复
-    getTopicBack:function () {
-      let vm=this;
-      axios.get('http://127.0.0.1:8000/forum/getforum_topic_back/').then(function (response) {
-        vm.topic_back=response.data
-        vm.topic_back=vm.$options.methods.getTopicJson(vm.topic_back)
-        console.log(vm.topic_back);
-        // for(let tb of vm.topic_back)
-        //   console.log(tb);
-
-      }).catch(function (error) {
-        console.log(error);
-
-      })
-
-
-    },
-
-   
+    }
   },
   components:{Reply_Modal,Comment_Modal }
 }

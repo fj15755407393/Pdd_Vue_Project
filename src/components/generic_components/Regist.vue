@@ -126,9 +126,9 @@
       console.log(this.identifyCode);
     },
     changeBack:function () {
-      this.isBack=true
-      this.isBack1=false
-      this.isBack2=false
+      this.isBack=true;
+      this.isBack1=false;
+      this.isBack2=false;
     },
     changeBack1:function () {
       this.isBack1=true;
@@ -194,7 +194,7 @@
         this.check_tip='请输入验证码'
         flag=false
       }
-        var vm=this
+        var vm=this;
         if (flag){
           axios.post('http://127.0.0.1:8000/user/isExist/',{
             'telephone':vm.telephone,

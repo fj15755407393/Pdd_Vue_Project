@@ -48,21 +48,21 @@ export default {
   },
   mounted:function () {
     this.getPositionsByCid(this.cid);
-    
+
   },
   methods:{
     getPositionsByCid:function (cid) {
       console.log("cid"+cid);
-      cid=396732
+      cid=396732;
       let vm=this;
       axios.get('http://127.0.0.1:8000/position/getpositionsbycid/'+cid).then(function (response) {
-        vm.positions=response.data
+        vm.positions=response.data;
         console.log(vm.positions);
       }).catch(function (error) {
         console.log(error);
 
       })
-      
+
     },
 
 

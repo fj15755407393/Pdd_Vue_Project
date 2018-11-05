@@ -21,7 +21,7 @@
     </a></div>
 
     <!--搜索按钮-->
-    <div><a href="./pages/search.html">
+    <div><a href="http://localhost:8080/#/search/">
       <div class="btn-box">
         <div class="btn"></div>
       </div>

@@ -30,86 +30,131 @@
           </div>
         </a></div>
 
-
       </div>
     </div>
+    <!--条件组建-->
+    <Searchitem :list="list" @getlist="getnewlist" click="getPageSize"> </Searchitem>
+    <Sort></Sort>
 
-    <div class="information" v-for="job in list" id="job._id" :key="job.pid">
-      <div class="div3">
-        <div class="div1" id="good">
-          <a href="#" class="new_a" :to="{params:{ job_id: job.pid }}" v-text="job.position">1111</a>
-          <span class="span1" v-text="job.date">2222</span>
-        </div>
+    <div >
+      <div  class="information" v-for="job in position_list" id="job.pid" :key="job.pid">
+        <div class="div3">
+          <div class="div1" id="good">
+            <router-link :to="'/position/'+job.cid">
+              <a href="#" class="new_a"  v-text="job.position">1111</a>
+            </router-link>
+            <span class="span1" v-text="job.pub_date">2222</span>
+          </div>
 
-        <div class="div2">
-          <span v-text="job.salary">salary</span>
-          <span class="span1" v-text="job.exp">333</span>/
-          <span v-text="job.edu">edu</span>
-        </div>
-      </div>
-      <div class="div4">
-        <div class="div5">
-          <a href="#" id="job.pid" v-text="job.company" :to="{params:{com_id: job.cid}}">444444</a>
-          <div class="last">
+          <div class="div2">
+            <span v-text="job.salary">salary</span>
+            <span class="span1" v-text="job.exp">333</span>/
+            <span v-text="job.edu">edu</span>
           </div>
         </div>
-        <div class="div6">
-          <span v-text="job.com_lal">5555555</span>
+        <div class="div4">
+          <div class="div5">
+            <router-link :to="'/company/'+job.pid">
+              <a href="#" id="job.cid" v-text="job.company" :to="{params:{com_id: job.cid}}">444444</a>
+            </router-link>
+
+            <div class="last">
+            </div>
+          </div>
+          <div class="div6">
+            <span v-text="job.com_lal">5555555</span>
+          </div>
+        </div>
+        <div class="dd">
         </div>
       </div>
-      <div class="dd">
+      <div id="button_page">
+        <PutPage  :count="pagesize" @indexclick="getIndex" v-show="pagesize>1"></PutPage>
       </div>
-    </div>
-    <PutPage  :count="pagesize" @indexclick="getIndex" v-show="pagesize>1"></PutPage>
+      </div>
+
+
     <!--<page  :count="10" @indexclick="getIndex" v-show="pagesize>1"></page>-->
   </div>
+
 </template>
 
 
 <script>
   import axios from 'axios'
   import PutPage from '../generic_components/PutPage'
+  import Searchitem from '../generic_components/SearchItem'
+  import Sort from '../generic_components/Sort'
   import vm from '../../../static/js/event.js'
   export default {
     name: 'position',
+    props:['islogin'],
     data: function () {
       return {
         condition: '',
         pageindex: 1,
         list: [],
-        pagesize: 0
+        number:20,
+        pagesize: 0,
+        new_list:[],
+        position_list:[]
       }
     },
+
     components:{
-      PutPage
+      PutPage,Searchitem,Sort
     },
+
     mounted: function () {
       this.getData();
       this.getPageSize();
     },
 
     methods: {
+      getnewlist(msg){
+        this.position_list=[];
+        this.new_list=msg;
+        for(let i=(this.pageindex-1)*this.pagesize;i<=this.number*this.pageindex;i++){
+          if(this.new_list[i]){
+            this.position_list.push(this.new_list[i])
+          }
+          else {
+            break;
+          }
+        }
+
+        this.getPageSize();
+        console.log('position_list:',this.new_list)
+      },
+
       getData: function () {
         var vm = this;
-        axios.get('http://localhost:8000/position/getpositionsbycon/' + vm.pageindex + '/' + vm.condition + '/')
-          .then(function (response) {
-            vm.list = eval('('+response.data+")");
-            //console.log(vm.list)
-          })
-          .catch(function (error) {
-            console.log(error)
-          })
+          axios.get('http://localhost:8000/position/getpositionsbycon/' + vm.pageindex + '/' + vm.condition + '/')
+            .then(function (response) {
+              vm.list = eval('('+response.data+")");
+              //console.log(vm.list)
+              vm.position_list=vm.list
+            })
+            .catch(function (error) {
+              console.log(error)
+            })
       },
 
       getPageSize: function () {
+
         var vm = this;
-        axios.get('http://localhost:8000/position/getPage/' + vm.condition + '/')
-          .then(function (response) {
-            vm.pagesize = Math.ceil(response.data.acount / 20);
-          })
-          .catch(function (error) {
-            console.log(error)
-          })
+        if(this.new_list.length>0){
+          vm.pagesize=Math.ceil(vm.new_list.length/20);
+        }
+        else {
+          axios.get('http://localhost:8000/position/getPage/' + vm.condition + '/')
+            .then(function (response) {
+              vm.pagesize = Math.ceil(response.data.acount / 20);
+            })
+            .catch(function (error) {
+              console.log(error)
+            })
+        }
       },
 
       searchData: function () {
@@ -119,9 +164,28 @@
       },
 
       getIndex: function (i) {
-        this.pageindex = i;
-        this.getData();
+        if(this.new_list.length>0){
+          this.pageindex = i;
+          console.log('pageindex',this.pageindex);
+          this.position_list=[];
+          for(let i=(this.pageindex-1)*20;i<=this.number*this.pageindex;i++){
+            if(this.new_list[i]){
+              this.position_list.push(this.new_list[i])
+            }
+            else{
+              break;
+            }
+          }
+          console.log(this.position_list)
+
+        }
+        else {
+          this.pageindex = i;
+          this.getData();
+          console.log('1111')
+        }
       }
+
     }
   }
 </script>
@@ -138,17 +202,15 @@
     /*height: 50px;*/
     /*background-color: #F7F9FA;*/
 
-
-
-
   }
 
   div.top-footer div.search-box{
     overflow: hidden;
-    position: relative;
+    /*position: relative;*/
     right: 330px;
-    margin-left:10px;
+    /*margin-left:10px;*/
     width: 700px;
+    margin: 0 auto;
     /*height: 100%;*/
     box-shadow: 0px 0px 5px #989898;
     /*background-color: red;*/
@@ -328,6 +390,11 @@
   div.top-footer div#hot-search a:hover{
 
     color: red;
+  }
+  #button_page{
+    width: 962px;
+    margin-left: 130px;
+    text-align: center;
   }
 
 
