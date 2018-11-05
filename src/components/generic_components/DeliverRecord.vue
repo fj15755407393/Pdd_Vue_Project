@@ -4,7 +4,7 @@
     <h3>简历投递记录</h3>
     <div  class="record-item" v-for=" record in records">
 
-      <div class="col-md-4" >
+      <div class="col-md-3" >
         <span>简历编号: </span>
         <span v-text="record.resume.id"></span>
       </div>
@@ -18,6 +18,7 @@
         <span>投递时间: </span>
         <span v-text="record.pr_date"></span>
       </div>
+
     </div>
 
 
@@ -72,6 +73,7 @@ export default {
 <style scoped>
 
 .record-item{
+  width: 95%;
   height: 20px;
   box-shadow: 0 0 1px  1px grey;
   margin-top: 5px;
