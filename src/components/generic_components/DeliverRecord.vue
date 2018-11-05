@@ -1,7 +1,7 @@
 <template>
   <!--放入自己的模板-->
   <div>
-    <h3>简历投递记录</h3>
+    <h4>简历投递记录</h4>
     <div  class="record-item" v-for=" record in records">
 
       <div class="col-md-3" >
