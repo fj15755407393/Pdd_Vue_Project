@@ -74,7 +74,9 @@ export default {
 
 .record-item{
   width: 95%;
-  height: 20px;
+  padding: 3px;
+  height: 30px;
+  line-height: 27px;
   box-shadow: 0 0 1px  1px grey;
   margin-top: 5px;
   cursor: pointer;
