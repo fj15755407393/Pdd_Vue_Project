@@ -8,7 +8,7 @@
   <div class="header2-css">
     <div class="left-mess">
       <div>
-        <span >公司发布</span>
+        <span >{{data.company.c_name}}公司发布</span>
         <span v-text="data.position.p_name"></span>
       </div>
       <p>
@@ -18,11 +18,11 @@
         <span v-text="data.position.edu"></span>/
         <span v-text="">全职</span>
       <br>
-      <span v-for="lal in doeval(data.position.word_cut)"  style="display: inline-block;box-shadow:0 0 2px grey;margin-left: 5px;margin-top: 5px;padding: 2px;" v-text="lal"></span>
+      <span v-for="lal in doeval(data.position.word_cut)"  style="display: inline-block;box-shadow:0 0 2px grey;margin-right: 5px;margin-top: 5px;padding: 2px;font-size: 0.8em" v-text="lal"></span>
       </p>
 
 
-
+      <br>
       <span v-text="data.position.pub_date+'发布于拉勾网'">555555555</span>
     </div>
     <div class="right-mess">
