@@ -278,6 +278,7 @@ div.nav div  a:active{
     color: #00B38A;
 }
 .information{
+    overflow: hidden;
     height: 125px;
     width: 960px;
     background-color: #ffffff;
